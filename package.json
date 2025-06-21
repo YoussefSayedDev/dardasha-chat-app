@@ -2,8 +2,11 @@
   "name": "dardasha-chat-app",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:api": "turbo run dev --filter=api",
+    "dev:mobile": "cd apps/mobile && expo start",
     "dev": "turbo run dev",
+    "build": "turbo run build",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"

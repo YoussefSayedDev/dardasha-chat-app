@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
 
 interface UserAvatarProps {
   className?: string;
@@ -33,12 +32,9 @@ export const UserAvatar = ({
           {fullbackName}
         </AvatarFallback>
       </Avatar>
-      <span
-        className={cn(
-          "absolute top-0 right-0 z-20 size-2 rounded-full ring-2 ring-white",
-          status === "online" && "bg-green-600",
-        )}
-      />
+      {status === "online" && (
+        <span className="absolute top-0 right-0 z-20 size-2 rounded-full bg-green-600 ring-2 ring-white" />
+      )}
     </div>
   );
 };

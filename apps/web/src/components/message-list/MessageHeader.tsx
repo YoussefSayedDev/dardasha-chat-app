@@ -1,11 +1,53 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Menu, Search } from "lucide-react";
+import { EllipsisVertical, Search, SquarePlus } from "lucide-react";
+import { useState } from "react";
 
 export const MessageHeader = () => {
+  const [selected, setSelected] = useState(0);
+
   return (
-    <div className="flex items-center gap-4">
-      <Menu className="size-10" />
-      <SearchInput />
+    <div>
+      <div className="flex items-center justify-between gap-2 py-3">
+        <h1 className="text-2xl font-bold">Dardasha</h1>
+        <div className="flex items-center">
+          <Button variant="ghost" className="text-muted-foreground">
+            <SquarePlus className="size-6" />
+          </Button>
+          <Button variant="ghost" className="text-muted-foreground">
+            <EllipsisVertical className="size-6" />
+          </Button>
+        </div>
+      </div>
+      <div className="flex items-center gap-4">
+        <SearchInput />
+      </div>
+      <div className="flex items-center justify-center gap-2 py-2">
+        <Button
+          variant={selected === 0 ? "default" : "outline"}
+          onClick={() => setSelected(0)}
+        >
+          All
+        </Button>
+        <Button
+          variant={selected === 1 ? "default" : "outline"}
+          onClick={() => setSelected(1)}
+        >
+          Unread
+        </Button>
+        <Button
+          variant={selected === 2 ? "default" : "outline"}
+          onClick={() => setSelected(2)}
+        >
+          Favorites
+        </Button>
+        <Button
+          variant={selected === 3 ? "default" : "outline"}
+          onClick={() => setSelected(3)}
+        >
+          Groups
+        </Button>
+      </div>
     </div>
   );
 };

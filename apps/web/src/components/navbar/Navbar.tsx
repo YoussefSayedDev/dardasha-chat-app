@@ -79,11 +79,6 @@ export const Navbar: React.FC<{ className?: string }> = ({ className }) => {
           <div className="relative">
             <Button
               variant="icon"
-              className={cn(
-                "flex items-center gap-2",
-                selected === 5 && "bg-accent text-accent-foreground",
-              )}
-              onClick={() => setSelected(5)}
               onMouseOver={() => setIsHover(5)}
               onMouseLeave={() => setIsHover(-1)}
             >

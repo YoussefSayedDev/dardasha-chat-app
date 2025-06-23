@@ -8,7 +8,7 @@ function App() {
       <div className="flex items-center">
         <Navbar className="w-16 p-2" />
         <MessageList className="w-[calc(25%-64px)] p-2" />
-        <Chat className="w-3/4 p-2" />
+        <Chat className="w-3/4" />
       </div>
     </main>
   );

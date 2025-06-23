@@ -22,31 +22,33 @@ export const MessageHeader = () => {
       <div className="flex items-center gap-4">
         <SearchInput />
       </div>
-      <div className="flex items-center justify-center gap-2 py-2">
-        <Button
-          variant={selected === 0 ? "default" : "outline"}
-          onClick={() => setSelected(0)}
-        >
-          All
-        </Button>
-        <Button
-          variant={selected === 1 ? "default" : "outline"}
-          onClick={() => setSelected(1)}
-        >
-          Unread
-        </Button>
-        <Button
-          variant={selected === 2 ? "default" : "outline"}
-          onClick={() => setSelected(2)}
-        >
-          Favorites
-        </Button>
-        <Button
-          variant={selected === 3 ? "default" : "outline"}
-          onClick={() => setSelected(3)}
-        >
-          Groups
-        </Button>
+      <div className="h-full w-full overflow-auto">
+        <div className="flex w-full items-center gap-2 py-2">
+          <Button
+            variant={selected === 0 ? "default" : "outline"}
+            onClick={() => setSelected(0)}
+          >
+            All
+          </Button>
+          <Button
+            variant={selected === 1 ? "default" : "outline"}
+            onClick={() => setSelected(1)}
+          >
+            Unread
+          </Button>
+          <Button
+            variant={selected === 2 ? "default" : "outline"}
+            onClick={() => setSelected(2)}
+          >
+            Favorites
+          </Button>
+          <Button
+            variant={selected === 3 ? "default" : "outline"}
+            onClick={() => setSelected(3)}
+          >
+            Groups
+          </Button>
+        </div>
       </div>
     </div>
   );

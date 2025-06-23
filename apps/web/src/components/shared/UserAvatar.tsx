@@ -33,7 +33,7 @@ export const UserAvatar = ({
         </AvatarFallback>
       </Avatar>
       {status === "online" && (
-        <span className="absolute top-0 right-0 z-20 size-2 rounded-full bg-green-600 ring-2 ring-white" />
+        <span className="absolute right-0 bottom-0 z-20 size-2 rounded-full bg-green-600 ring-2 ring-white" />
       )}
     </div>
   );

@@ -1,3 +1,3 @@
-export const ChatWindow: React.FC<{ className?: string }> = ({ className }) => {
-  return <div className={className}>ChatWindow</div>;
+export const ChatWindow = () => {
+  return <div className="h-[calc(100vh-128px)]">Chat Window</div>;
 };

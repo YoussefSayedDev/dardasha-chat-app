@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { EllipsisVertical, Search, SquarePlus } from "lucide-react";
 import { useState } from "react";
 
-export const MessageHeader = () => {
+export const ChannelHeader = () => {
   const [selected, setSelected] = useState(0);
 
   return (

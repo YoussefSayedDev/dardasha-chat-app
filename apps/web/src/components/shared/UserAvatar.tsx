@@ -13,7 +13,7 @@ export const UserAvatar = ({
   src,
   alt,
   status = "online",
-  name,
+  name = "",
 }: UserAvatarProps) => {
   const fullbackName = name
     .toUpperCase()

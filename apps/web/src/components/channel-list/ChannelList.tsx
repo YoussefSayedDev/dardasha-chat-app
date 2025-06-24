@@ -1,18 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { messages } from "@/data/dummy";
+import { chats } from "@/data/dummy";
 import { cn } from "@/lib/utils";
 import { Archive } from "lucide-react";
-import { MessageHeader } from "./MessageHeader";
-import { MessageItem } from "./MessageItem";
+import { ChannelHeader } from "./ChannelHeader";
+import { ChannelItem } from "./ChannelItem";
+// import { ChatItem } from "./ChatItem";
 
-export const MessageList: React.FC<{ className?: string }> = ({
+export const ChannelList: React.FC<{ className?: string }> = ({
   className,
 }) => {
   return (
     <div className={cn(className, "flex h-screen flex-col gap-2")}>
       <div>
-        <MessageHeader />
+        <ChannelHeader />
         <Button
           variant="ghost"
           className="flex w-full items-center justify-start gap-2 py-2 ps-10"
@@ -25,15 +26,16 @@ export const MessageList: React.FC<{ className?: string }> = ({
       </div>
       <ScrollArea className="h-full w-full overflow-hidden">
         <div className="flex flex-col gap-2 pe-3">
-          {messages.map((message) => (
-            <MessageItem
-              key={message.id}
-              id={message.id}
-              name={message.name}
-              lastMessage={message.lastMessage}
-              timestamp={message.timestamp}
-              online={message.online}
-              unread={message.unread}
+          {chats.map((chat) => (
+            <ChannelItem
+              key={chat.id}
+              id={chat.id}
+              isGroup={chat.isGroup}
+              lastMessage={chat.lastMessage}
+              name={chat.name}
+              participants={chat.participants}
+              updatedAt={chat.updatedAt}
+              unread={chat.unread}
             />
           ))}
         </div>

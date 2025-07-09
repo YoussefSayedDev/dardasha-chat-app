@@ -26,24 +26,28 @@ export const ChannelHeader = () => {
         <div className="flex w-full items-center gap-2 py-2">
           <Button
             variant={selected === 0 ? "default" : "outline"}
+            size="sm"
             onClick={() => setSelected(0)}
           >
             All
           </Button>
           <Button
             variant={selected === 1 ? "default" : "outline"}
+            size="sm"
             onClick={() => setSelected(1)}
           >
             Unread
           </Button>
           <Button
             variant={selected === 2 ? "default" : "outline"}
+            size="sm"
             onClick={() => setSelected(2)}
           >
             Favorites
           </Button>
           <Button
             variant={selected === 3 ? "default" : "outline"}
+            size="sm"
             onClick={() => setSelected(3)}
           >
             Groups

@@ -118,4 +118,4 @@ function EmojiPickerButton({ onEmojiSelect }: EmojiPickerButtonProps) {
   );
 }
 
-function AttachmentFiles() {}
+// function AttachmentFiles() {}

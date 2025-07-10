@@ -1,4 +1,4 @@
-import { Chat } from "@/components/chat-window/Chat";
+import ChatsPage from "@/pages/Chats";
 import { useParams } from "react-router-dom";
 // import { ChatWindow } from "@/components/chat/ChatWindow";
 
@@ -7,7 +7,7 @@ const ChatRoom = () => {
 
   // if (!chatId) return <div>Chat not found.</div>;
 
-  return <Chat className="w-3/4" chatId={chatId} />;
+  return <ChatsPage className="w-full" chatId={chatId} />;
 };
 
 export default ChatRoom;

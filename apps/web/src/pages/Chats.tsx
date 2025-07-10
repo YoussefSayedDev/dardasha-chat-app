@@ -1,15 +1,15 @@
+import { ChatFooter } from "@/components/chat/chat-window/ChatFooter";
+import { ChatHeader } from "@/components/chat/chat-window/ChatHeader";
+import { ChatWindow } from "@/components/chat/chat-window/ChatWindow";
 import { cn } from "@/lib/utils";
-import { ChatFooter } from "./ChatFooter";
-import { ChatHeader } from "./ChatHeader";
-import { ChatWindow } from "./ChatWindow";
 
-export const Chat: React.FC<{
+const ChatsPage: React.FC<{
   className?: string;
   chatId: string | undefined;
 }> = ({ className, chatId }) => {
   if (!chatId) return <NoChatSelected />;
   return (
-    <div className={cn(className, "border-border h-screen border-s-2")}>
+    <div className={cn(className, "border-border h-screen w-full border-s-2")}>
       <ChatHeader />
       <ChatWindow chatId={chatId} />
       <ChatFooter />
@@ -24,3 +24,5 @@ function NoChatSelected() {
     </div>
   );
 }
+
+export default ChatsPage;

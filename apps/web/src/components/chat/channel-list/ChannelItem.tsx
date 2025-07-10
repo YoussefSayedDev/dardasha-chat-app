@@ -21,7 +21,7 @@ export const ChannelItem = ({
     <Link
       className="hover:bg-secondary flex cursor-pointer items-center justify-between gap-2 rounded-md px-4 py-3 transition-colors duration-300"
       key={id}
-      to={`/${id}`}
+      to={`${id}`}
     >
       {/* Avatar */}
       <div className="flex items-center gap-3">

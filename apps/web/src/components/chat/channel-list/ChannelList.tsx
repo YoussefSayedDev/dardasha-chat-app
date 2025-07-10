@@ -5,13 +5,12 @@ import { cn } from "@/lib/utils";
 import { Archive } from "lucide-react";
 import { ChannelHeader } from "./ChannelHeader";
 import { ChannelItem } from "./ChannelItem";
-// import { ChatItem } from "./ChatItem";
 
 export const ChannelList: React.FC<{ className?: string }> = ({
   className,
 }) => {
   return (
-    <div className={cn(className, "flex h-screen flex-col gap-2")}>
+    <div className={cn(className, "flex h-screen flex-col gap-2 px-2")}>
       <div>
         <ChannelHeader />
         <Button

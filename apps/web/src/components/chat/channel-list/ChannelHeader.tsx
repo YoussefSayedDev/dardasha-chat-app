@@ -7,7 +7,7 @@ export const ChannelHeader = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <div>
+    <header>
       <div className="flex items-center justify-between gap-2 py-3">
         <h1 className="text-2xl font-bold">Dardasha</h1>
         <div className="flex items-center">
@@ -54,7 +54,7 @@ export const ChannelHeader = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

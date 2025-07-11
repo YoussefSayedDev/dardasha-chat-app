@@ -406,6 +406,7 @@ function generateChats(users: User[], chatCount: number): Chat[] {
       participants,
       lastMessage: tempLastMessage,
       updatedAt: tempLastMessage.timestamp,
+      favorite: Math.random() > 0.5,
       unread: Math.floor(Math.random() * 10),
     };
 

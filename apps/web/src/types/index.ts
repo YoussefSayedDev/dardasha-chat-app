@@ -13,6 +13,7 @@ export interface Chat {
   participants: User[];
   lastMessage: Message;
   updatedAt: string;
+  favorite: boolean;
   unread: number;
 }
 

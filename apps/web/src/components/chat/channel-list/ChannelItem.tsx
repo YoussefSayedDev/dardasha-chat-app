@@ -9,6 +9,7 @@ export const ChannelItem = ({
   isGroup,
   name,
   participants,
+  // favorite,
   lastMessage,
   unread,
 }: Chat) => {

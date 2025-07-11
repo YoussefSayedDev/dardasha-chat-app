@@ -1,11 +1,11 @@
 import ChatsLayout from "@/components/ChatsLayout";
 import Layout from "@/components/Layout";
 import CallsPage from "@/pages/Calls";
-import ChatRoom from "@/pages/ChatRoom";
+import ChatsPage from "@/pages/Chats";
 import GroupsPage from "@/pages/Groups";
 import SettingsPage from "@/pages/Settings";
+import SettingsDetails from "@/pages/SettingsDetails";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SettingsDetails from "./pages/SettingsDetails";
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
 
           {/* Chats */}
           <Route path="chats" element={<ChatsLayout />}>
-            {/* <Route path="/" element={<ChatRoom />} /> */}
-            <Route path=":id" element={<ChatRoom />} />
+            <Route path="" element={<ChatsPage />} />
+            <Route path=":id" element={<ChatsPage />} />
           </Route>
         </Route>
 
